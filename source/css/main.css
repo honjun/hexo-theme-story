@@ -4835,6 +4835,9 @@ body.is-preload .spotlight.onload-image-fade-in .image img {
 .spotlight.style1:first-child{
     min-height: 100vh;
 }
+.spotlight.style1:first-child .image{
+    width: 50%;
+}
 
 .spotlight.style1 .content {
 	padding: 7rem 7rem 5rem 7rem;
@@ -4869,9 +4872,7 @@ body.is-preload .spotlight.onload-image-fade-in .image img {
 	border-radius: 0;
 }
 
-.spotlight.style1:first-child .image{
-    width: 50%;
-}
+
 
 .spotlight.style1 .image img {
 	-moz-object-fit: cover;
