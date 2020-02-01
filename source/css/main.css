@@ -8511,3 +8511,24 @@ body.is-preload .items.onload-fade-in > * > .inner {
 #wrapper.divided > .invert:first-child {
 	box-shadow: none !important;
 }
+
+
+/* 添加的css项 */
+article .title {
+	font-size: 3rem;
+	font-weight: 800;
+}
+article h2 {
+	font-size: 1.7rem;
+}
+
+article .stuff {
+	font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+
+article .stuff span{
+	margin-right: 10px;
+}
