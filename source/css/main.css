@@ -157,7 +157,6 @@ body {
 body, input, select, textarea {
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	font-size: 1rem;
-	font-weight: 300;
 	line-height: 1.65;
 }
 
@@ -8531,4 +8530,67 @@ article .stuff {
 
 article .stuff span{
 	margin-right: 10px;
+}
+
+#vcomments input {
+	display: inline-block;
+}
+
+#vcomments button {
+	height: 2.25rem;
+}
+
+.v .vinput {
+	font-size: 1rem !important;
+}
+.v .veditor {
+	font-size: 1rem !important;
+}
+
+hr {
+    margin: 2.5rem 0 0 0;
+}
+
+.post-nav{
+    display: flex;
+    margin-bottom: 10px;
+}
+.post-nav-item {
+    flex: 1;
+    padding: 10px 0 0 0;
+    vertical-align: top;
+}
+
+.post-nav-item a {
+    position: relative;
+    display: block;
+    line-height: 25px;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.post-nav-next a {
+    padding-right: 15px;
+    text-align: right;
+}
+.post-nav-prev a {
+    padding-left: 15px;
+}
+
+.post-nav-prev .fa {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    font-size: 12px;
+    line-height: 100%;
+}
+.post-nav-next .fa{
+    position: absolute;
+    right: 0;
+    top: 30%;
+    font-size: 12px;
+    line-height: 100%;
 }
