@@ -10,7 +10,13 @@
       </div>
     </div>
     <%- post.content %>
-
+    <!-- 文章标签 -->
+    <div class="tags">
+      <span>标签：</span>
+      <% post.tags.each(function(tag){%>
+        <a href="<%- url_for(tag.path) %>" class="tag"><%= tag.name %></a>
+      <% }) %>
+    </div>
     <!-- 上一篇和下一篇 -->
     <hr>
     <div class="post-nav">
@@ -31,7 +37,7 @@
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script src='//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js'></script>
     <div id="vcomments"></div>
-    <script>
+    <script async>
       var valine = new Valine();
       valine.init({
         el: '#vcomments',
