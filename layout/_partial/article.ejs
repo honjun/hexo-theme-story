@@ -1,5 +1,13 @@
 <article class="wrapper style1 align-left">
+  <!-- 返回按扭 -->
+  <a href="javascript:history.back(-1)" class="cd-nav-trigger"> 
+    <span class="cd-nav-icon"></span>
+    <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+    <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+    </svg>
+  </a> 
   <div class="inner">
+    <!-- header头部 -->
     <div class="header">
       <h1 class="title"><%- post.title %></h1>
       <div class="stuff">
@@ -9,7 +17,10 @@
         <span id="busuanzi_container_site_pv">阅读 <span id="busuanzi_value_site_pv"></span></span>
       </div>
     </div>
-    <%- post.content %>
+    <div class="post-content">
+      <%- post.content %>
+    </div>
+    <%- tocbot(['50px', 'calc((100% - 960px) / 2 - 205px)']) %>
     <!-- 文章标签 -->
     <div class="tags">
       <span>标签：</span>
@@ -31,8 +42,6 @@
         </div>
         <% } %>
     </div>
-
-
     <!-- valine评论 -->
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <script src='//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js'></script>

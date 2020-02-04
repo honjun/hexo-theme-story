@@ -8611,3 +8611,87 @@ hr {
 	color: #fff;
 	background: #333;
 }
+
+article.wrapper.style1 > .inner {
+	padding: 2rem 2.5rem 3rem 2.5rem;
+	margin: 50px auto;
+  width: 960px;
+  box-shadow: 1px 0px 5px 1px #ccc;
+}
+
+article.wrapper.style1 > .inner img {
+	width: 100%;
+}
+
+article.wrapper.style1 .highlight {
+  overflow: auto;
+}
+
+a.toc-link {
+	font-size: 0.8rem !important;
+}
+
+/* 返回按钮 */
+.cd-nav-trigger {
+  transform: rotate(180deg);
+}
+.cd-nav-trigger {
+  position: fixed;
+  z-index: 3;
+  left: 5%;
+  top: 20px;
+  height: 54px;
+  width: 54px;
+  background-color: #233;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  transition: transform 0.5s;
+}
+#cd-nav {
+  color: #9cb3a8;
+  text-decoration: none;
+}
+.cd-nav-trigger .cd-nav-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+}
+.cd-nav-trigger circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.4s 0.3s;
+}
+.cd-nav-trigger circle {
+  transition: stroke-dashoffset 0.4s 0s;
+}
+.cd-nav-trigger .cd-nav-icon::before, .cd-nav-trigger .cd-nav-icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: inherit;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition: transform 0.5s, width 0.5s;
+}
+.cd-nav-trigger .cd-nav-icon::before {
+  transform-origin: right top;
+  transform: rotate(45deg);
+}
+.cd-nav-trigger .cd-nav-icon::after, .cd-nav-trigger .cd-nav-icon::before {
+  width: 50%;
+  transition: transform 0.5s, width 0.5s;
+}
+.cd-nav-trigger .cd-nav-icon::after {
+  transform-origin: right bottom;
+  transform: rotate(-45deg); 
+}
