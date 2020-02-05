@@ -1,0 +1,98 @@
+<%- css(['/css/archive.css']) %>
+<div class="content">
+  <% var tempYear %>
+  <% var posts = site.posts.sort('date') %>
+  <% posts.each(function(post, i){ %>
+    <% var currentYear = parseInt(date(post.date, 'YYYY')); %>
+    <% if (tempYear != currentYear){ %>
+      <% tempYear = currentYear %>
+      <article>
+        <h3><%- currentYear%></h3>
+    <% } %>
+        <section>
+          <span class="point-time point-yellow"></span>
+          <time datetime="<%- date(post.date, 'YYYY-MM')%>">
+            <span><%- date(post.date, 'MMMM DD,')%></span>
+          </time>
+          <aside>
+            <p class="things"><%= post.title%></p>
+            <!-- 取巧方法，只认第一个分类 -->
+            <p class="brief"><span class="text-yellow"><%= Object.values(post.categories.data[0])[0] %>
+            </span></p>
+          </aside>
+        </section>
+    <% if (!posts.eq(i + 1) || currentYear != parseInt(date(posts.eq(i + 1).date, 'YYYY'))){ %>
+      </article>
+    <% } %>
+  <% }) %>
+</div>
+<!--   
+  <article>
+    <h3>2012</h3>
+    <section>
+      <span class="point-time point-green"></span>
+      <time datetime="2012-11">
+        <span>December</span>
+        <span>2012</span>
+      </time>
+      <aside>
+        <p class="things">Visitor at Maketing Live 2012</p>
+        <p class="brief"><span class="text-green">Conference</span></p>
+      </aside>
+    </section>
+    <section>
+      <span class="point-time point-green"></span>
+      <time datetime="2012-11">
+        <span>November</span>
+        <span>2012</span>
+      </time>
+      <aside>
+        <p class="things">Visitor at Daily web 2012</p>
+        <p class="brief"><span class="text-green">Conference</span></p>
+      </aside>
+    </section>
+    <section>
+      <span class="point-time point-red"></span>
+      <time datetime="2012-09">
+        <span>September</span>
+        <span>2012</span>
+      </time>
+      <aside>
+        <p class="things">You reached 500 followers on Dribbble</p>
+        <p class="brief"><span class="text-red">Social Appearance</span></p>
+      </aside>
+    </section>
+    <section>
+      <span class="point-time point-blue"></span>
+      <time datetime="2012-08">
+        <span>August</span>
+        <span>2012</span>
+      </time>
+      <aside>
+        <p class="things">New job position as Senior Designer at Fantasy Interactive</p>
+        <p class="brief"><span class="text-blue">Working Experience</span></p>
+      </aside>
+    </section>
+    <section>
+      <span class="point-time point-red"></span>
+      <time datetime="2012-03">
+        <span>March</span>
+        <span>2012</span>
+      </time>
+      <aside>
+        <p class="things">Speaker at ASMO conference</p>
+        <p class="brief"><span class="text-red">Conference</span></p>
+      </aside>
+    </section>
+    <section>
+      <span class="point-time point-blue"></span>
+      <time datetime="2012-02">
+        <span>February</span>
+        <span>2012</span>
+      </time>
+      <aside>
+        <p class="things">You added new skills to job position Junior Designer at Fantasy Interactive</p>
+        <p class="brief"><span class="text-blue">Working Experience</span></p>
+      </aside>
+    </section>
+  </article> -->
