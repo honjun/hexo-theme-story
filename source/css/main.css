@@ -2386,65 +2386,6 @@ input[type="radio"] {
 	z-index: -1;
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-	text-decoration: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 1rem;
-	font-weight: 300;
-	padding-left: 2.4rem;
-	padding-right: 0.75rem;
-	position: relative;
-	margin-bottom: 0;
-}
-
-input[type="checkbox"] + label:before,
-input[type="radio"] + label:before {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	display: inline-block;
-	font-style: normal;
-	font-variant: normal;
-	text-rendering: auto;
-	line-height: 1;
-	text-transform: none !important;
-	font-family: 'Font Awesome 5 Free';
-	font-weight: 900;
-}
-
-input[type="checkbox"] + label:before,
-input[type="radio"] + label:before {
-	border-radius: 4px;
-	border: solid 1px;
-	content: '';
-	display: inline-block;
-	font-size: 0.8rem;
-	height: 1.65rem;
-	left: 0;
-	line-height: 1.65rem;
-	position: absolute;
-	text-align: center;
-	top: 0;
-	width: 1.65rem;
-}
-
-input[type="checkbox"]:checked + label:before,
-input[type="radio"]:checked + label:before {
-	content: '\f00c';
-}
-
-input[type="checkbox"] + label:before {
-	border-radius: 4px;
-}
-
-input[type="radio"] + label:before {
-	border-radius: 100%;
-}
 
 ::-webkit-input-placeholder {
 	opacity: 1.0;
@@ -8640,8 +8581,8 @@ a.toc-link {
   z-index: 3;
   left: 5%;
   top: 20px;
-  height: 54px;
-  width: 54px;
+  height: 44px;
+  width: 44px;
   background-color: #233;
   border-radius: 50%;
   overflow: hidden;
@@ -8649,6 +8590,7 @@ a.toc-link {
   white-space: nowrap;
   transition: transform 0.5s;
 }
+
 #cd-nav {
   color: #9cb3a8;
   text-decoration: none;
@@ -8694,4 +8636,60 @@ a.toc-link {
 .cd-nav-trigger .cd-nav-icon::after {
   transform-origin: right bottom;
   transform: rotate(-45deg); 
+}
+
+@media screen and (max-width: 736px) {
+	.spotlight.style1:first-child .image {
+	  width: 100%;
+	}
+}
+.paginator {
+  margin-top: 2em;
+  width: 100%;
+  text-align: center;
+}
+.paginator .page-number{
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 0.8em;
+  font-weight: 600;
+  height: 2em;
+  line-height: 2em;
+  margin: 0 0.125em;
+  min-width: 2em;
+  padding: 0 0.5em;
+  text-decoration: none;
+}
+.paginator .current{
+  box-shadow: inset 0 0 0 1px #47D3E5;
+  color: #47D3E5 !important;
+}
+@media screen and (max-width: 736px) {
+	.cd-nav-trigger {
+	  position: fixed;
+	  display: inline-block;
+	  z-index: 3;
+	  left: 0;
+	  top: 0;
+	  height: 44px;
+	  width: 100%;
+	  background-color: #233;
+	  border-radius: 0;
+	  overflow: hidden;
+	  text-indent: 100%;
+	  white-space: nowrap;
+	  transition: transform 0.5s;
+	  text-align: left;
+	}
+	.cd-nav-trigger .cd-nav-icon {
+    position: absolute;
+    right: 10px;
+    left: auto;
+    top: 50%;
+    bottom: auto;
+    transform: translateX(-50%) translateY(-50%);
+    width: 22px;
+    height: 2px;
+    background-color: #ffffff;
+	}
 }
