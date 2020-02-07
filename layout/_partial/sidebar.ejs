@@ -1,0 +1,30 @@
+<nav>
+  <div class="menu-btn">
+    <div class="line line__1"></div>
+    <div class="line line__2"></div>
+    <div class="line line__3"></div>
+  </div>
+
+  <div class="sub-menu-btn">
+    <div class="line line__1"></div>
+    <div class="line line__2"></div>
+  </div>
+
+  <ul class="nav-links">
+    <% var sidebar = theme.sidebar %>
+    <% for (item in sidebar) {%>
+      <li class="link">
+        <% if (!sidebar[item].submenus) {%>
+          <a href="<%- url_for(sidebar[item].path) %>"><i class="<%= sidebar[item].fa %>"></i><%- item %></a>
+        <% } else { %>
+          <a href="<%- url_for(sidebar[item].path) %>" style="pointer-events: none;"><i class="<%= sidebar[item].fa %>"></i><%- item %></a>
+          <ol>
+            <% for (submenu in sidebar[item].submenus) {%>
+              <li><a href="<%- url_for(sidebar[item].submenus[submenu].path) %>"><%- submenu %></a></li>
+            <% } %>
+          </ol>
+        <% } %>
+      </li>
+    <% } %>
+  </ul>
+</nav>

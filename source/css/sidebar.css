@@ -48,9 +48,6 @@ nav .nav-links li {
 nav .nav-links li:hover {
   color: rgba(255, 255, 255, 0.85);
 }
-nav .nav-links li a {
-  pointer-events: none;
-}
 nav .nav-links li ol {
   display: none;
 }
@@ -200,4 +197,9 @@ nav.sub-menu-open .nav-links li {
 }
 nav.sub-menu-open .nav-links .hover-el {
   opacity: 0;
+}
+
+nav .fa {
+  color: #fff;
+  margin-right: 10px;
 }
