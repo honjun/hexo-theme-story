@@ -17,6 +17,7 @@ nav {
   z-index: 4;
 }
 nav a {
+  position: relative;
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 900;

@@ -1,0 +1,27 @@
+<div class="site-search">
+  <div class="popup search-popup" style="display: none;">
+    <div class="search-header">
+      <span class="search-icon">
+        <i class="fa fa-search"></i>
+      </span>
+      <div class="search-input-container">
+        <input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+      </div>
+      <span class="popup-btn-close">
+        <i class="fa fa-times-circle"></i>
+      </span>
+    </div>
+    <div id="search-result"></div>
+  </div>
+  <div class="search-pop-overlay" style="display: none;"></div>
+</div>
+<script>
+var CONFIG = {
+  path: '<%= config.search.path%>',
+  root: '<%= config.root%>',
+  localsearch:{
+    top_n_per_article: '<%= config.local_search.top_n_per_article%>',
+    trigger: '<%= config.local_search.trigger%>'
+  }
+}
+</script>

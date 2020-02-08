@@ -11,6 +11,10 @@
   </div>
 
   <ul class="nav-links">
+    <!-- 搜索 -->
+    <li class="">
+      <a role="button" class="popup-trigger"><i class="fa-search-btn fa fa-search fa-fw"></i><input placeholder="Searching..." type="text" class="search-input-btn"></a>
+    </li>
     <% var sidebar = theme.sidebar %>
     <% for (item in sidebar) {%>
       <li class="link">
@@ -28,3 +32,4 @@
     <% } %>
   </ul>
 </nav>
+<%- partial('_partial/search') %>
